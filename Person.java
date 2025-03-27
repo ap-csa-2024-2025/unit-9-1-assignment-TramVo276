@@ -6,6 +6,8 @@ public class Person
     // TODO: Complete the non-default constructor
     public Person(String iName, String iAge)
     {
+        this.name = iName;
+        this.age = iAge;
 
     }
 

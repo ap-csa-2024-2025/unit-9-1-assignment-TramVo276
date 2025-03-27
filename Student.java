@@ -12,6 +12,14 @@ public class Student extends Person
     // given parameter values.
     public Student(String iName, String iAge, int iGrade, double igpa)
     {
+        /* This two is bad b/c it private in the Person
+        name = iName;
+        age = iAge; */
+
+        super(iName, iAge); //super - the super class Person(String, int)
+
+        grade = iGrade;
+        gpa = igpa;
 
     }
 
@@ -20,6 +28,15 @@ public class Student extends Person
     // age 0, with the given grade and gpa.
     public Student(int iGrade, double igpa)
     {
+        super("John Doe", 0);
+        grade = iGrade;
+        gpa = igpa;
+
+        /*super();
+        grade = iGrade;
+        gpa = igpa;
+
+        this("John Doe", 0, iGrade, igpa) */
 
     }
 
@@ -28,6 +45,12 @@ public class Student extends Person
     // and GPA of 0.0.
     public Student()
     {
+        super(); // call from Parent - Person() 
+        grade = 0;
+        gpa = 0.0;
+
+       /* this() // can only call from children - Student() */
+
 
     }
 
@@ -40,6 +63,7 @@ public class Student extends Person
 
     public int getGrade()
     {
+        gradeGpa = igpa;
         return grade;
     }
 
